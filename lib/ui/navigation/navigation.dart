@@ -7,23 +7,25 @@ class Nav {
   static List<GetPage> routes = [
     GetPage(
       name: Routes.app,
-      page: () => mobile.AppView(),
+      page: () => const mobile.AppView(),
       binding: mobile.AppViewControllerBindings(),
-    ),
-    GetPage(
-      name: Routes.home,
-      page: () => mobile.HomeView(),
-      binding: mobile.HomeViewControllerBindings(),
-    ),
-    GetPage(
-      name: Routes.lesson,
-      page: () => mobile.LessonView(),
-      binding: mobile.LessonViewControllerBindings(),
-    ),
-    GetPage(
-      name: Routes.revision,
-      page: () => mobile.LessonView(),
-      binding: mobile.LessonViewControllerBindings(),
+      children: [
+        GetPage(
+          name: Routes.home,
+          page: () => const mobile.HomeView(),
+          binding: mobile.HomeViewControllerBindings(),
+        ),
+        GetPage(
+          name: Routes.lesson,
+          page: () => const mobile.LessonView(),
+          binding: mobile.LessonViewControllerBindings(),
+        ),
+        GetPage(
+          name: Routes.revision,
+          page: () => const mobile.LessonView(),
+          binding: mobile.LessonViewControllerBindings(),
+        ),
+      ],
     ),
   ];
 }

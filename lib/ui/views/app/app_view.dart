@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import '../../navigation/export_routes.dart';
 
 class AppView extends GetView<AppViewController> {
+  const AppView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,14 +25,14 @@ class AppView extends GetView<AppViewController> {
           switch (settings.name) {
             case Routes.home:
               return GetPageRoute(
-                page: () => HomeView(),
+                page: () => const HomeView(),
                 binding: HomeViewControllerBindings(),
                 routeName: Routes.home,
                 transitionDuration: const Duration(microseconds: 0),
               );
             case Routes.lesson:
               return GetPageRoute(
-                page: () => LessonView(),
+                page: () => const LessonView(),
                 binding: LessonViewControllerBindings(),
                 routeName: Routes.lesson,
                 transitionDuration:const Duration(microseconds: 0),
@@ -43,7 +45,12 @@ class AppView extends GetView<AppViewController> {
                 transitionDuration:const Duration(microseconds: 0),
               );
             default:
-              return GetPageRoute();
+              return GetPageRoute(
+                page: () => const HomeView(),
+                binding: HomeViewControllerBindings(),
+                routeName: Routes.home,
+                transitionDuration: const Duration(microseconds: 0),
+              );
           }
         },
       ),
