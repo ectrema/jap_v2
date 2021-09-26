@@ -17,3 +17,8 @@ export '../views/lesson/lesson_view.dart';
 export '../views/revision/revision_view_controller_bindings.dart';
 export '../views/revision/revision_view_controller.dart';
 export '../views/revision/revision_view.dart';
+
+/* Kana */
+export '../views/lesson/kana/kana_view.dart';
+export '../views/lesson/kana/kana_view_controller.dart';
+export '../views/lesson/kana/kana_view_controller_bindings.dart';

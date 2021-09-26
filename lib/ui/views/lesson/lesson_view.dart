@@ -1,3 +1,6 @@
+import 'package:jap_v2/ui/core/datasource_kana.dart';
+import 'package:jap_v2/ui/navigation/routes.dart';
+
 import '../../core/widget/space_red_widget.dart';
 import 'lesson_view_controller.dart';
 import 'package:get/get.dart';
@@ -45,9 +48,16 @@ class LessonView extends GetView<LessonViewController> {
         Container(
           margin: const EdgeInsets.only(top: 15),
           width: 310,
-          child: GestureDetector(
-            // onTap: () => Modular.to
-            //     .pushNamed(KanaModule.route, arguments: ["Hiragana"]),
+          child: InkWell(
+            onTap: () async {
+              await Get.toNamed(
+                Routes.app + Routes.lesson + Routes.kana,
+                arguments: {
+                  'title': 'Hiragana',
+                  'mapKana': DataSourceKana().initHiragana(),
+                },
+              );
+            },
             child: Row(
               children: const [
                 Padding(
@@ -66,9 +76,16 @@ class LessonView extends GetView<LessonViewController> {
         Container(
           margin: const EdgeInsets.only(top: 10),
           width: 310,
-          child: GestureDetector(
-            // onTap: () => Modular.to
-            //     .pushNamed(KanaModule.route, arguments: ["Katakana"]),
+          child: InkWell(
+            onTap: () async {
+              await Get.toNamed(
+                Routes.app + Routes.lesson + Routes.kana,
+                arguments: {
+                  'title': 'Katakana',
+                  'mapKana': DataSourceKana().initKatakana(),
+                },
+              );
+            },
             child: Row(
               children: const [
                 Padding(

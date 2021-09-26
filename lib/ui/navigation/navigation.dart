@@ -19,6 +19,13 @@ class Nav {
           name: Routes.lesson,
           page: () => const mobile.LessonView(),
           binding: mobile.LessonViewControllerBindings(),
+          children: [
+            GetPage(
+              name: Routes.kana,
+              page: () => const mobile.KanaView(),
+              binding: mobile.KanaViewControllerBinding(),
+            ),
+          ],
         ),
         GetPage(
           name: Routes.revision,
