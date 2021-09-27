@@ -6,5 +6,6 @@ class Routes {
     static const home = '/home';
     static const lesson = '/lesson';
     static const kana = '/kana';
+    static const kanji = '/kanji';
     static const revision = '/revision';
 }

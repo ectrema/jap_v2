@@ -48,7 +48,7 @@ class LessonView extends GetView<LessonViewController> {
         Container(
           margin: const EdgeInsets.only(top: 15),
           width: 310,
-          child: InkWell(
+          child: GestureDetector(
             onTap: () async {
               await Get.toNamed(
                 Routes.app + Routes.lesson + Routes.kana,
@@ -76,7 +76,7 @@ class LessonView extends GetView<LessonViewController> {
         Container(
           margin: const EdgeInsets.only(top: 10),
           width: 310,
-          child: InkWell(
+          child: GestureDetector(
             onTap: () async {
               await Get.toNamed(
                 Routes.app + Routes.lesson + Routes.kana,
@@ -134,7 +134,7 @@ class LessonView extends GetView<LessonViewController> {
           margin: const EdgeInsets.only(top: 15),
           width: 310,
           child: GestureDetector(
-            // onTap: () => Modular.to.pushNamed(KanjiModule.route),
+            onTap: () => Get.toNamed(Routes.app + Routes.lesson + Routes.kanji),
             child: Row(
               children: const [
                 Padding(

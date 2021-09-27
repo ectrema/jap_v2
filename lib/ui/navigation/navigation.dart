@@ -25,6 +25,11 @@ class Nav {
               page: () => const mobile.KanaView(),
               binding: mobile.KanaViewControllerBinding(),
             ),
+            GetPage(
+              name: Routes.kanji,
+              page: () => const mobile.KanjiView(),
+              binding: mobile.KanjiViewControllerBinding(),
+            ),
           ],
         ),
         GetPage(
