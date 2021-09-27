@@ -34,6 +34,13 @@ class Nav {
                   name: Routes.transitionKanji,
                   page: () => const mobile.TranstionKanjiView(),
                   binding: mobile.TranstionKanjiViewControllerBinding(),
+                  children: [
+                    GetPage(
+                      name: Routes.detailKanji,
+                      page: () => const mobile.DetailKanjiView(),
+                      binding: mobile.DetailKanjiViewControllerBinding(),
+                    ),
+                  ],
                 ),
               ],
             ),

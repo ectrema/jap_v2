@@ -32,3 +32,8 @@ export '../views/lesson/kanji/kanji_view_controller_bindings.dart';
 export '../views/lesson/kanji/transition_kanji/transition_kanji_view.dart';
 export '../views/lesson/kanji/transition_kanji/transition_kanji_view_controller.dart';
 export '../views/lesson/kanji/transition_kanji/transition_kanji_view_controller_bindings.dart';
+
+/* Detail Kanji */
+export '../views/lesson/kanji/transition_kanji/detail_kanji/detail_kanji_view.dart';
+export '../views/lesson/kanji/transition_kanji/detail_kanji/detail_kanji_view_controller.dart';
+export '../views/lesson/kanji/transition_kanji/detail_kanji/detail_kanji_view_controller_bindings.dart';

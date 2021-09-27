@@ -84,6 +84,9 @@ class XThemeData {
           color: kSecondWhiteColorDark,
         ),
       ),
+      bottomSheetTheme: const BottomSheetThemeData(
+        elevation: 4,
+      ),
       cardColor: kBackgroundColorDark,
       inputDecorationTheme: const InputDecorationTheme(
         enabledBorder: OutlineInputBorder(
