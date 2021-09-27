@@ -48,25 +48,25 @@ class XThemeData {
       backgroundColor: kBackgroundColorDark,
       canvasColor: kThirdColorDark,
       focusColor: Colors.grey[600],
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: kBackgroundColorDark,
         selectedItemColor: kSecondRedColorDark,
         unselectedItemColor: kSecondWhiteColorDark,
       ),
       scaffoldBackgroundColor: kBackgroundColorDark,
-      textSelectionTheme: TextSelectionThemeData(
+      textSelectionTheme: const TextSelectionThemeData(
         cursorColor: kSecondRedColorDark,
         selectionColor: Colors.black12,
         selectionHandleColor: kSecondRedColorDark,
       ),
       appBarTheme: AppBarTheme(
         color: kBackgroundColorDark,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: kThirdColorDark,
         ),
         titleTextStyle: kHeadLine.copyWith(color: kSecondRedColorDark),
       ),
-      iconTheme: IconThemeData(
+      iconTheme: const IconThemeData(
         color: kThirdColorDark,
         size: 25,
       ),
@@ -85,7 +85,7 @@ class XThemeData {
         ),
       ),
       cardColor: kBackgroundColorDark,
-      inputDecorationTheme: InputDecorationTheme(
+      inputDecorationTheme: const InputDecorationTheme(
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: kSecondRedColorDark),
         ),

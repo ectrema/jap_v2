@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jap_v2/ui/core/widget/space_red_widget.dart';
+import 'package:jap_v2/ui/navigation/routes.dart';
 import 'package:jap_v2/ui/views/lesson/kanji/kanji_view_controller.dart';
 
 class KanjiView extends GetView<KanjiViewController> {
@@ -29,8 +30,15 @@ class KanjiView extends GetView<KanjiViewController> {
                   ),
                   width: (MediaQuery.of(context).size.width) / 2,
                   child: GestureDetector(
-                    // splashColor: Colors.transparent,
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed(
+                        Routes.app +
+                            Routes.lesson +
+                            Routes.kanji +
+                            Routes.transitionKanji,
+                        arguments: 'N5',
+                      );
+                    },
                     child: const Text(
                       '入',
                       style: TextStyle(fontSize: 120.0),
