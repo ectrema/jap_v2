@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:jap_v2/ui/navigation/routes.dart';
 import '../../core/widget/space_red_widget.dart';
 import 'revision_view_controller.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +64,7 @@ class RevisionView extends GetView<RevisionViewController> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(top: 10),
+          margin: const EdgeInsets.only(top: 10),
           width: 310,
           child: Row(
             children: const [
@@ -112,7 +113,10 @@ class RevisionView extends GetView<RevisionViewController> {
           margin: const EdgeInsets.only(top: 15),
           width: 310,
           child: GestureDetector(
-            // onTap: () => Modular.to.pushNamed(RevisionKanjiModule.route),
+            onTap: () => Get.toNamed(
+              Routes.app + Routes.lesson + Routes.kanji,
+              arguments: true,
+            ),
             child: Row(
               children: const [
                 Padding(

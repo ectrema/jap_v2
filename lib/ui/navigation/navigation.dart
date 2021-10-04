@@ -50,6 +50,13 @@ class Nav {
           name: Routes.revision,
           page: () => const mobile.LessonView(),
           binding: mobile.LessonViewControllerBindings(),
+          children: [
+            GetPage(
+              name: Routes.kanji,
+              page: () => const mobile.KanjiView(),
+              binding: mobile.KanjiViewControllerBinding(),
+            )
+          ],
         ),
       ],
     ),

@@ -32,10 +32,15 @@ class KanjiView extends GetView<KanjiViewController> {
                   child: GestureDetector(
                     onTap: () {
                       Get.toNamed(
-                        Routes.app +
-                            Routes.lesson +
-                            Routes.kanji +
-                            Routes.transitionKanji,
+                        controller.fromRevision!
+                            ? Routes.app +
+                                Routes.revision +
+                                Routes.kanji +
+                                Routes.transitionKanji
+                            : Routes.app +
+                                Routes.lesson +
+                                Routes.kanji +
+                                Routes.transitionKanji,
                         arguments: 'N5',
                       );
                     },
