@@ -30,8 +30,8 @@ class KanjiView extends GetView<KanjiViewController> {
                   ),
                   width: (MediaQuery.of(context).size.width) / 2,
                   child: GestureDetector(
-                    onTap: () {
-                      Get.toNamed(
+                    onTap: () async {
+                      await Get.toNamed(
                         controller.fromRevision!
                             ? Routes.app +
                                 Routes.revision +

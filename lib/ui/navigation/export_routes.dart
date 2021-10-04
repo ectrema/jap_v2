@@ -18,6 +18,11 @@ export '../views/revision/revision_view_controller_bindings.dart';
 export '../views/revision/revision_view_controller.dart';
 export '../views/revision/revision_view.dart';
 
+/* Transition Kanji Revision */
+export '../views/revision/transition_kanji_revision/transition_kanji_revision_view.dart';
+export '../views/revision/transition_kanji_revision/transition_kanji_revision_view_controller.dart';
+export '../views/revision/transition_kanji_revision/transition_kanji_revision_view_controller_bindings.dart';
+
 /* Kana */
 export '../views/lesson/kana/kana_view.dart';
 export '../views/lesson/kana/kana_view_controller.dart';
@@ -29,9 +34,9 @@ export '../views/lesson/kanji/kanji_view_controller.dart';
 export '../views/lesson/kanji/kanji_view_controller_bindings.dart';
 
 /* Transition Kanji */
-export '../views/lesson/kanji/transition_kanji/transition_kanji_view.dart';
-export '../views/lesson/kanji/transition_kanji/transition_kanji_view_controller.dart';
-export '../views/lesson/kanji/transition_kanji/transition_kanji_view_controller_bindings.dart';
+export '../views/lesson/kanji/transition_kanji/transition_kanji_lesson_view.dart';
+export '../views/lesson/kanji/transition_kanji/transition_kanji_lesson_view_controller.dart';
+export '../views/lesson/kanji/transition_kanji/transition_kanji_lesson_view_controller_bindings.dart';
 
 /* Detail Kanji */
 export '../views/lesson/kanji/transition_kanji/detail_kanji/detail_kanji_view.dart';
