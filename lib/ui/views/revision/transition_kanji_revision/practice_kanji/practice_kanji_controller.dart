@@ -93,13 +93,13 @@ class PracticeKanjiController extends GetxController {
             .translate
             .toString()
             .contains(response[toTest])) {
-          randomString();
           if (indexShow < selectedKanji.length - 1) {
             indexShow.value++;
           } else {
             showFinish.value = true;
           }
           indexPractice = 0;
+          randomString();
         } else {
           colorButton[toTest] = Get.theme.canvasColor.withOpacity(0.2);
         }

@@ -17,59 +17,65 @@ class TransitionKanjiRevisionView
           controller.title!,
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+      body: Stack(
         children: [
-          const SpaceRedWidget(),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(10, 10, 5, 0),
-            child: SizedBox(
-              height: context.height - 150,
-              width: context.width,
-              child: ListView(
-                children: [
-                  _buildContent(),
-                ],
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const SpaceRedWidget(),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 10, 5, 0),
+                child: SizedBox(
+                  height: context.height - 150,
+                  width: context.width,
+                  child: ListView(
+                    children: [
+                      _buildContent(),
+                    ],
+                  ),
+                ),
               ),
+            ],
+          ),
+          Positioned(
+            bottom: 60,
+            left: 20,
+            right: 20,
+            child: Obx(
+              () => controller.listJlpt.where((e) => e.isSelected).isNotEmpty
+                  ? GestureDetector(
+                      onTap: () {
+                        Get.toNamed(
+                          Routes.revision +
+                              Routes.kanji +
+                              Routes.transitionKanji +
+                              Routes.practiceKanji,
+                          arguments: {
+                            'title': controller.title,
+                            'selectedKanji':
+                                controller.listJlpt.where((e) => e.isSelected),
+                            'jlpt': controller.listJlpt,
+                          },
+                        );
+                      },
+                      child: Container(
+                        height: 50,
+                        width: context.width,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: Get.theme.canvasColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Text(
+                          "Tester",
+                          style: Get.theme.textTheme.headline5,
+                        ),
+                      ),
+                    )
+                  : const SizedBox(),
             ),
           ),
         ],
-      ),
-      bottomSheet: GestureDetector(
-        onTap: () {},
-        child: Obx(
-          () => controller.listJlpt.where((e) => e.isSelected).isNotEmpty
-              ? GestureDetector(
-                  onTap: () {
-                    Get.toNamed(
-                      Routes.revision +
-                          Routes.kanji +
-                          Routes.transitionKanji +
-                          Routes.practiceKanji,
-                      arguments: {
-                        'title': controller.title,
-                        'selectedKanji':
-                            controller.listJlpt.where((e) => e.isSelected),
-                        'jlpt': controller.listJlpt,
-                      },
-                    );
-                  },
-                  child: Container(
-                    height: 50,
-                    width: context.width,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Get.theme.canvasColor,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Text(
-                      "Tester",
-                      style: Get.theme.textTheme.headline5,
-                    ),
-                  ),
-                )
-              : const SizedBox(),
-        ),
       ),
     );
   }
