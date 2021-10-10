@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../../core/widget/space_red_widget.dart';
 import '../../navigation/export_routes.dart';
 
-class HomeView extends GetView<HomeViewController> {
+class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
 
   @override

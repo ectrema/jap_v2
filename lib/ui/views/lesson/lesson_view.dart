@@ -2,7 +2,7 @@ import 'package:jap_v2/ui/core/datasource_kana.dart';
 import 'package:jap_v2/ui/navigation/routes.dart';
 
 import '../../core/widget/space_red_widget.dart';
-import 'lesson_view_controller.dart';
+import 'lesson_controller.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 

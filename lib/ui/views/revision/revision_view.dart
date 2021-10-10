@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 import 'package:jap_v2/ui/navigation/routes.dart';
 import '../../core/widget/space_red_widget.dart';
-import 'revision_view_controller.dart';
+import 'revision_controller.dart';
 import 'package:flutter/material.dart';
 
-class RevisionView extends GetView<RevisionViewController> {
+class RevisionView extends GetView<RevisionController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

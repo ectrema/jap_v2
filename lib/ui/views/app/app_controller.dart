@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class AppViewController extends GetxController {
+class AppController extends GetxController {
   RxInt index = 0.obs;
   RxString name = "Accueil".obs;
 

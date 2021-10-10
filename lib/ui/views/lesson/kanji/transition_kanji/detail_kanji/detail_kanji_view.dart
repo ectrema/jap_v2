@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 import 'package:jap_v2/ui/core/widget/space_red_widget.dart';
 import 'package:jap_v2/ui/views/lesson/kanji/transition_kanji/detail_kanji/widget/detail_kanji_item.dart';
 
-import 'detail_kanji_view_controller.dart';
+import 'detail_kanji_controller.dart';
 
-class DetailKanjiView extends GetView<DetailKanjiViewController> {
+class DetailKanjiView extends GetView<DetailKanjiController> {
   const DetailKanjiView({Key? key}) : super(key: key);
 
   @override

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jap_v2/ui/core/widget/space_red_widget.dart';
 import 'package:jap_v2/ui/navigation/routes.dart';
-import 'package:jap_v2/ui/views/lesson/kanji/kanji_view_controller.dart';
+import 'package:jap_v2/ui/views/lesson/kanji/kanji_controller.dart';
 
-class KanjiView extends GetView<KanjiViewController> {
+class KanjiView extends GetView<KanjiController> {
   const KanjiView({Key? key}) : super(key: key);
 
   @override

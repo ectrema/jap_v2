@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'lesson_view_controller.dart';
+import 'lesson_controller.dart';
 
-class LessonViewControllerBindings extends Bindings {
+class LessonBindings extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<LessonViewController>(

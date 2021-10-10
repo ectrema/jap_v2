@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:jap_v2/entities/kana.dart';
 
-class KanaViewController extends GetxController {
+class KanaController extends GetxController {
   String? title;
   Map<int, List<Kana>> mapKana = <int, List<Kana>>{};
 

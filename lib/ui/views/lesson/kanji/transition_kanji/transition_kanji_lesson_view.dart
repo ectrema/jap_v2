@@ -4,9 +4,9 @@ import 'package:jap_v2/entities/jlpt.dart';
 import 'package:jap_v2/ui/core/widget/space_red_widget.dart';
 import 'package:jap_v2/ui/navigation/routes.dart';
 
-import 'transition_kanji_lesson_view_controller.dart';
+import 'transition_kanji_lesson_controller.dart';
 
-class TransitionKanjiLessonView extends GetView<TransitionKanjiLessonViewController> {
+class TransitionKanjiLessonView extends GetView<TransitionKanjiLessonController> {
   const TransitionKanjiLessonView({Key? key}) : super(key: key);
 
   @override

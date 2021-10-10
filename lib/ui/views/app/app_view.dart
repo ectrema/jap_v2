@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
 import '../../core/widget/space_red_widget.dart';
-import 'app_view_controller.dart';
+import 'app_controller.dart';
 import '../../navigation/routes.dart';
 import 'package:flutter/material.dart';
 import '../../navigation/export_routes.dart';
 
-class AppView extends GetView<AppViewController> {
+class AppView extends GetView<AppController> {
   const AppView({Key? key}) : super(key: key);
 
   @override
@@ -26,28 +26,28 @@ class AppView extends GetView<AppViewController> {
             case Routes.home:
               return GetPageRoute(
                 page: () => const HomeView(),
-                binding: HomeViewControllerBindings(),
+                binding: HomeBindings(),
                 routeName: Routes.home,
                 transitionDuration: const Duration(microseconds: 0),
               );
             case Routes.lesson:
               return GetPageRoute(
                 page: () => const LessonView(),
-                binding: LessonViewControllerBindings(),
+                binding: LessonBindings(),
                 routeName: Routes.lesson,
                 transitionDuration:const Duration(microseconds: 0),
               );
               case Routes.revision:
               return GetPageRoute(
                 page: () => RevisionView(),
-                binding: RevisionViewControllerBindings(),
+                binding: RevisionBindings(),
                 routeName: Routes.revision,
                 transitionDuration:const Duration(microseconds: 0),
               );
             default:
               return GetPageRoute(
                 page: () => const HomeView(),
-                binding: HomeViewControllerBindings(),
+                binding: HomeBindings(),
                 routeName: Routes.home,
                 transitionDuration: const Duration(microseconds: 0),
               );

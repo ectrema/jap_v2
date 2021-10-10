@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:jap_v2/entities/jlpt.dart';
 
-class DetailKanjiViewController extends GetxController {
+class DetailKanjiController extends GetxController {
   String? title;
   RxInt index = 0.obs;
   List<Jlpt>? jlpt;

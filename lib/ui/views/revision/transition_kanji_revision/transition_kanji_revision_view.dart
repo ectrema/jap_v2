@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:jap_v2/ui/core/widget/space_red_widget.dart';
 import 'package:jap_v2/ui/navigation/routes.dart';
 
-import 'transition_kanji_revision_view_controller.dart';
+import 'transition_kanji_revision_controller.dart';
 
 class TransitionKanjiRevisionView
-    extends GetView<TransitionKanjiRevisionViewController> {
+    extends GetView<TransitionKanjiRevisionController> {
   const TransitionKanjiRevisionView({Key? key}) : super(key: key);
 
   @override

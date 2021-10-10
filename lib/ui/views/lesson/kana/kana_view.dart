@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jap_v2/entities/kana.dart';
 import 'package:jap_v2/ui/core/widget/space_red_widget.dart';
-import 'package:jap_v2/ui/views/lesson/kana/kana_view_controller.dart';
+import 'package:jap_v2/ui/views/lesson/kana/kana_controller.dart';
 
-class KanaView extends GetView<KanaViewController> {
+class KanaView extends GetView<KanaController> {
   const KanaView({Key? key}) : super(key: key);
 
   @override

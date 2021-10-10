@@ -8,37 +8,37 @@ class Nav {
     GetPage(
       name: Routes.app,
       page: () => const AppView(),
-      binding: AppViewControllerBindings(),
+      binding: AppBindings(),
       children: [
         GetPage(
           name: Routes.home,
           page: () => const HomeView(),
-          binding: HomeViewControllerBindings(),
+          binding: HomeBindings(),
         ),
         GetPage(
           name: Routes.lesson,
           page: () => const LessonView(),
-          binding: LessonViewControllerBindings(),
+          binding: LessonBindings(),
           children: [
             GetPage(
               name: Routes.kana,
               page: () => const KanaView(),
-              binding: KanaViewControllerBinding(),
+              binding: KanaBindings(),
             ),
             GetPage(
               name: Routes.kanji,
               page: () => const KanjiView(),
-              binding: KanjiViewControllerBinding(),
+              binding: KanjiBindings(),
               children: [
                 GetPage(
                   name: Routes.transitionKanji,
                   page: () => const TransitionKanjiLessonView(),
-                  binding: TransitionKanjiLessonViewControllerBinding(),
+                  binding: TransitionKanjiLessonBindings(),
                   children: [
                     GetPage(
                       name: Routes.detailKanji,
                       page: () => const DetailKanjiView(),
-                      binding: DetailKanjiViewControllerBinding(),
+                      binding: DetailKanjiBindings(),
                     ),
                   ],
                 ),
@@ -49,17 +49,17 @@ class Nav {
         GetPage(
           name: Routes.revision,
           page: () => const LessonView(),
-          binding: LessonViewControllerBindings(),
+          binding: LessonBindings(),
           children: [
             GetPage(
               name: Routes.kanji,
               page: () => const KanjiView(),
-              binding: KanjiViewControllerBinding(),
+              binding: KanjiBindings(),
               children: [
                 GetPage(
                   name: Routes.transitionKanji,
                   page: () => const TransitionKanjiRevisionView(),
-                  binding: TransitionKanjiRevisionViewControllerBindings(),
+                  binding: TransitionKanjiRevisionBindings(),
                   children: [
                     GetPage(
                       name: Routes.practiceKanji,

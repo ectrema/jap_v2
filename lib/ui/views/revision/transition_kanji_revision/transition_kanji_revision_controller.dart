@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:jap_v2/entities/jlpt.dart';
 import 'package:jap_v2/ui/core/datasource_jlpt_n5.dart';
 
-class TransitionKanjiRevisionViewController extends GetxController {
+class TransitionKanjiRevisionController extends GetxController {
   String? title;
   RxList<Jlpt> listJlpt = <Jlpt>[].obs;
   @override
