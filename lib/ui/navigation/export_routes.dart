@@ -23,6 +23,11 @@ export '../views/revision/transition_kanji_revision/transition_kanji_revision_vi
 export '../views/revision/transition_kanji_revision/transition_kanji_revision_view_controller.dart';
 export '../views/revision/transition_kanji_revision/transition_kanji_revision_view_controller_bindings.dart';
 
+/* Transition Kanji Revision */
+export '../views/revision/transition_kanji_revision/practice_kanji/practice_kanji_view.dart';
+export '../views/revision/transition_kanji_revision/practice_kanji/practice_kanji_controller.dart';
+export '../views/revision/transition_kanji_revision/practice_kanji/practice_kanji_bindings.dart';
+
 /* Kana */
 export '../views/lesson/kana/kana_view.dart';
 export '../views/lesson/kana/kana_view_controller.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jap_v2/ui/core/widget/space_red_widget.dart';
+import 'package:jap_v2/ui/navigation/routes.dart';
 
 import 'transition_kanji_revision_view_controller.dart';
 
@@ -38,17 +39,34 @@ class TransitionKanjiRevisionView
         onTap: () {},
         child: Obx(
           () => controller.listJlpt.where((e) => e.isSelected).isNotEmpty
-              ? Container(
-                  height: 50,
-                  width: context.width,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: Get.theme.canvasColor,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Text(
-                    "Tester",
-                    style: Get.theme.textTheme.headline5,
+              ? GestureDetector(
+                  onTap: () {
+                    Get.toNamed(
+                      Routes.app +
+                          Routes.revision +
+                          Routes.kanji +
+                          Routes.transitionKanji +
+                          Routes.practiceKanji,
+                      arguments: {
+                        'title': controller.title,
+                        'selectedKanji':
+                            controller.listJlpt.where((e) => e.isSelected),
+                        'jlpt': controller.listJlpt,
+                      },
+                    );
+                  },
+                  child: Container(
+                    height: 50,
+                    width: context.width,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Get.theme.canvasColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text(
+                      "Tester",
+                      style: Get.theme.textTheme.headline5,
+                    ),
                   ),
                 )
               : const SizedBox(),

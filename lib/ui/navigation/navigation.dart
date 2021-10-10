@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'export_routes.dart' as mobile;
+import 'export_routes.dart';
 
 import 'routes.dart';
 
@@ -7,38 +7,38 @@ class Nav {
   static List<GetPage> routes = [
     GetPage(
       name: Routes.app,
-      page: () => const mobile.AppView(),
-      binding: mobile.AppViewControllerBindings(),
+      page: () => const AppView(),
+      binding: AppViewControllerBindings(),
       children: [
         GetPage(
           name: Routes.home,
-          page: () => const mobile.HomeView(),
-          binding: mobile.HomeViewControllerBindings(),
+          page: () => const HomeView(),
+          binding: HomeViewControllerBindings(),
         ),
         GetPage(
           name: Routes.lesson,
-          page: () => const mobile.LessonView(),
-          binding: mobile.LessonViewControllerBindings(),
+          page: () => const LessonView(),
+          binding: LessonViewControllerBindings(),
           children: [
             GetPage(
               name: Routes.kana,
-              page: () => const mobile.KanaView(),
-              binding: mobile.KanaViewControllerBinding(),
+              page: () => const KanaView(),
+              binding: KanaViewControllerBinding(),
             ),
             GetPage(
               name: Routes.kanji,
-              page: () => const mobile.KanjiView(),
-              binding: mobile.KanjiViewControllerBinding(),
+              page: () => const KanjiView(),
+              binding: KanjiViewControllerBinding(),
               children: [
                 GetPage(
                   name: Routes.transitionKanji,
-                  page: () => const mobile.TransitionKanjiLessonView(),
-                  binding: mobile.TransitionKanjiLessonViewControllerBinding(),
+                  page: () => const TransitionKanjiLessonView(),
+                  binding: TransitionKanjiLessonViewControllerBinding(),
                   children: [
                     GetPage(
                       name: Routes.detailKanji,
-                      page: () => const mobile.DetailKanjiView(),
-                      binding: mobile.DetailKanjiViewControllerBinding(),
+                      page: () => const DetailKanjiView(),
+                      binding: DetailKanjiViewControllerBinding(),
                     ),
                   ],
                 ),
@@ -48,19 +48,25 @@ class Nav {
         ),
         GetPage(
           name: Routes.revision,
-          page: () => const mobile.LessonView(),
-          binding: mobile.LessonViewControllerBindings(),
+          page: () => const LessonView(),
+          binding: LessonViewControllerBindings(),
           children: [
             GetPage(
               name: Routes.kanji,
-              page: () => const mobile.KanjiView(),
-              binding: mobile.KanjiViewControllerBinding(),
+              page: () => const KanjiView(),
+              binding: KanjiViewControllerBinding(),
               children: [
                 GetPage(
                   name: Routes.transitionKanji,
-                  page: () => const mobile.TransitionKanjiRevisionView(),
-                  binding:
-                      mobile.TransitionKanjiRevisionViewControllerBinding(),
+                  page: () => const TransitionKanjiRevisionView(),
+                  binding: TransitionKanjiRevisionViewControllerBindings(),
+                  children: [
+                    GetPage(
+                      name: Routes.practiceKanji,
+                      page: () => const PracticeKanjiView(),
+                      binding: PracticeKanjiBinding(),
+                    ),
+                  ],
                 ),
               ],
             )

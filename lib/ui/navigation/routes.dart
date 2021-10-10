@@ -8,6 +8,7 @@ class Routes {
     static const kana = '/kana';
     static const kanji = '/kanji';
     static const transitionKanji = '/transitionKanji';
+    static const practiceKanji = '/practiceKanji';
     static const detailKanji = '/detailKanji';
     static const revision = '/revision';
 }
