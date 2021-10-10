@@ -42,8 +42,7 @@ class TransitionKanjiRevisionView
               ? GestureDetector(
                   onTap: () {
                     Get.toNamed(
-                      Routes.app +
-                          Routes.revision +
+                      Routes.revision +
                           Routes.kanji +
                           Routes.transitionKanji +
                           Routes.practiceKanji,

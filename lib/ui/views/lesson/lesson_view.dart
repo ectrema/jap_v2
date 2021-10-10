@@ -51,7 +51,7 @@ class LessonView extends GetView<LessonViewController> {
           child: GestureDetector(
             onTap: () async {
               await Get.toNamed(
-                Routes.app + Routes.lesson + Routes.kana,
+                Routes.lesson + Routes.kana,
                 arguments: {
                   'title': 'Hiragana',
                   'mapKana': DataSourceKana().initHiragana(),
@@ -79,7 +79,7 @@ class LessonView extends GetView<LessonViewController> {
           child: GestureDetector(
             onTap: () async {
               await Get.toNamed(
-                Routes.app + Routes.lesson + Routes.kana,
+                Routes.lesson + Routes.kana,
                 arguments: {
                   'title': 'Katakana',
                   'mapKana': DataSourceKana().initKatakana(),
@@ -134,7 +134,7 @@ class LessonView extends GetView<LessonViewController> {
           margin: const EdgeInsets.only(top: 15),
           width: 310,
           child: GestureDetector(
-            onTap: () => Get.toNamed(Routes.app + Routes.lesson + Routes.kanji),
+            onTap: () => Get.toNamed(Routes.lesson + Routes.kanji),
             child: Row(
               children: const [
                 Padding(

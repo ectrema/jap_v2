@@ -6,7 +6,8 @@ import 'package:jap_v2/ui/navigation/routes.dart';
 
 import 'transition_kanji_lesson_controller.dart';
 
-class TransitionKanjiLessonView extends GetView<TransitionKanjiLessonController> {
+class TransitionKanjiLessonView
+    extends GetView<TransitionKanjiLessonController> {
   const TransitionKanjiLessonView({Key? key}) : super(key: key);
 
   @override
@@ -44,8 +45,7 @@ class TransitionKanjiLessonView extends GetView<TransitionKanjiLessonController>
     return GestureDetector(
       onTap: () async {
         await Get.toNamed(
-          Routes.app +
-              Routes.lesson +
+          Routes.lesson +
               Routes.kanji +
               Routes.transitionKanji +
               Routes.detailKanji,

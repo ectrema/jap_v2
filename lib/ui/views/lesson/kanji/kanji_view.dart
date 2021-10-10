@@ -33,12 +33,10 @@ class KanjiView extends GetView<KanjiController> {
                     onTap: () async {
                       await Get.toNamed(
                         controller.fromRevision!
-                            ? Routes.app +
-                                Routes.revision +
+                            ? Routes.revision +
                                 Routes.kanji +
                                 Routes.transitionKanji
-                            : Routes.app +
-                                Routes.lesson +
+                            : Routes.lesson +
                                 Routes.kanji +
                                 Routes.transitionKanji,
                         arguments: 'N5',

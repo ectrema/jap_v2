@@ -114,7 +114,7 @@ class RevisionView extends GetView<RevisionController> {
           width: 310,
           child: GestureDetector(
             onTap: () => Get.toNamed(
-              Routes.app + Routes.lesson + Routes.kanji,
+              Routes.lesson + Routes.kanji,
               arguments: true,
             ),
             child: Row(

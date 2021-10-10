@@ -9,69 +9,67 @@ class Nav {
       name: Routes.app,
       page: () => const AppView(),
       binding: AppBindings(),
+    ),
+    GetPage(
+      name: Routes.home,
+      page: () => const HomeView(),
+      binding: HomeBindings(),
+    ),
+    GetPage(
+      name: Routes.lesson,
+      page: () => const LessonView(),
+      binding: LessonBindings(),
       children: [
         GetPage(
-          name: Routes.home,
-          page: () => const HomeView(),
-          binding: HomeBindings(),
+          name: Routes.kana,
+          page: () => const KanaView(),
+          binding: KanaBindings(),
         ),
         GetPage(
-          name: Routes.lesson,
-          page: () => const LessonView(),
-          binding: LessonBindings(),
+          name: Routes.kanji,
+          page: () => const KanjiView(),
+          binding: KanjiBindings(),
           children: [
             GetPage(
-              name: Routes.kana,
-              page: () => const KanaView(),
-              binding: KanaBindings(),
-            ),
-            GetPage(
-              name: Routes.kanji,
-              page: () => const KanjiView(),
-              binding: KanjiBindings(),
+              name: Routes.transitionKanji,
+              page: () => const TransitionKanjiLessonView(),
+              binding: TransitionKanjiLessonBindings(),
               children: [
                 GetPage(
-                  name: Routes.transitionKanji,
-                  page: () => const TransitionKanjiLessonView(),
-                  binding: TransitionKanjiLessonBindings(),
-                  children: [
-                    GetPage(
-                      name: Routes.detailKanji,
-                      page: () => const DetailKanjiView(),
-                      binding: DetailKanjiBindings(),
-                    ),
-                  ],
+                  name: Routes.detailKanji,
+                  page: () => const DetailKanjiView(),
+                  binding: DetailKanjiBindings(),
                 ),
               ],
             ),
           ],
         ),
+      ],
+    ),
+    GetPage(
+      name: Routes.revision,
+      page: () => const LessonView(),
+      binding: LessonBindings(),
+      children: [
         GetPage(
-          name: Routes.revision,
-          page: () => const LessonView(),
-          binding: LessonBindings(),
+          name: Routes.kanji,
+          page: () => const KanjiView(),
+          binding: KanjiBindings(),
           children: [
             GetPage(
-              name: Routes.kanji,
-              page: () => const KanjiView(),
-              binding: KanjiBindings(),
+              name: Routes.transitionKanji,
+              page: () => const TransitionKanjiRevisionView(),
+              binding: TransitionKanjiRevisionBindings(),
               children: [
                 GetPage(
-                  name: Routes.transitionKanji,
-                  page: () => const TransitionKanjiRevisionView(),
-                  binding: TransitionKanjiRevisionBindings(),
-                  children: [
-                    GetPage(
-                      name: Routes.practiceKanji,
-                      page: () => const PracticeKanjiView(),
-                      binding: PracticeKanjiBindings(),
-                    ),
-                  ],
+                  name: Routes.practiceKanji,
+                  page: () => const PracticeKanjiView(),
+                  binding: PracticeKanjiBindings(),
                 ),
               ],
-            )
+            ),
           ],
-        ),
+        )
       ],
     ),
   ];
