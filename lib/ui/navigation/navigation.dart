@@ -64,7 +64,7 @@ class Nav {
                     GetPage(
                       name: Routes.practiceKanji,
                       page: () => const PracticeKanjiView(),
-                      binding: PracticeKanjiBinding(),
+                      binding: PracticeKanjiBindings(),
                     ),
                   ],
                 ),
