@@ -15,15 +15,17 @@ class KanaView extends GetView<KanaController> {
           controller.title!,
         ),
       ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            const SpaceRedWidget(),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: _buildContent(),
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: [
+              const SpaceRedWidget(),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: _buildContent(),
+              ),
+            ],
+          ),
         ),
       ),
     );
